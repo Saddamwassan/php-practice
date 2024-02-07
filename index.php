@@ -57,7 +57,232 @@
 // echo str_word_count("ahmed ali ");
 // echo "<br>";
 // echo strpos("Hello world!", "world");
+// String methods **************************
 // string to uppercase**********
-$name = "ali";
-echo strtoupper($name);
+// $name = "ali";
+// echo strtoupper($name);
+// echo "<br>";
+// // lowercase 
+// echo strtolower($name);
+// echo "<br>";
+// // replace 
+// echo str_replace("ali","Mohammad",$name);
+// echo "<br>";
+// // reverse
+// echo strrev("This is php.");
+// echo "<br>";
+// // remove whitespaces 
+// echo trim($name);
+// // convert string into an array 
+// // $sentence = "This is news";
+// // $sentarray = explode(" ",$sentence);
+// // print_r($sentarray); // print_r function is used to print an array.
+// // slicing in string ***********
+// $name = "Ali Ahmed";
+// echo substr($name,4,8);
+// echo "<br>";
+// // start slice from 4 to end.
+// echo substr($name,4);
+// // reverse slice 
+// echo substr($name, -5, 2);
+// // negative length
+// echo substr($name, 5, -2);
+// // concatenation by .
+// $a = "Shahmir";
+// $b = "good";
+// $c = "$a" . " is a " .$b. " student";
+// echo "<br>";
+// echo $c;
+// // escape \ characters ***************
+// echo "hi this is \"escape\" character";
+// \'	Single Quote	
+// \"	Double Quote	
+// \$	PHP variables	
+// \n	New Line	
+// \r	Carriage Return	
+// \t	Tab	
+// \f	Form Feed	
+// \ooo	Octal value	
+// \xhh
+// php numbers ****************
+// $num = 22331;
+// $num1 = 2.33;
+// var_dump(is_int($num));
+// echo "<br>";
+// var_dump(is_float($num));
+// echo "<br>";
+// var_dump(is_int($num));
+// // is_finite
+// // is_infinite
+// // is_numeric
+// // is_numeric *****************
+// $x = 5985;
+// var_dump(is_numeric($x));
+// echo "<br>";
+// $x = "5985";
+// var_dump(is_numeric($x));
+// echo "<br>";
+// $x = "59.85" + 100;
+// var_dump(is_numeric($x));
+// echo "<br>";
+// $x = "Hello";
+// var_dump(is_numeric($x));
+// // casting *****************
+// // float to int 
+// $a = 3.22;
+// $b = (int)$a;
+// var_dump($b);
+// echo "<br>";
+// // echo $b;
+// // string to float 
+// $x = "233.22";
+// $y = (float)$x;
+// var_dump($y);
+// $a = 1011;
+// $b = 11.222;
+// $c = false;
+// $d = true;
+// $e = NULL;
+// $f = "let's do it";
+// // casted
+// $x = (string)$a;
+// $y = (string)$b;
+// $z = (string)$c;
+// $w = (string)$d;
+// $u = (string)$e;
+// $v = (string)$f;
+// var_dump($x);
+// echo "<br>";
+// var_dump($y);
+// echo "<br>";
+// var_dump($z);
+// echo "<br>";
+// var_dump($w);
+// echo "<br>";
+// var_dump($u);
+// echo "<br>";
+// var_dump($v);
+// // cast to bool ******************
+// // If a value is 0, NULL, false, or empty, the (bool) converts it into false, otherwise true. Even -1 converts to true.
+// // casting to array**********
+// // casting to object *********
+// // array to object 
+// // object to array 
+// // to null unset is used its deprecated
+// // Math function in php ***************** 
+// // pi 
+// echo pi();
+// echo "<br>";
+// // min  
+// echo min(-12,-3,4,5,6,7,8);
+// echo "<br>";
+// // max 
+// echo max(1,2,33,11,100,212);
+// echo "<br>";
+// // absolute value ******returns +ve value.
+// echo abs(-1.2);
+// echo "<br>";
+// // square root 
+// echo sqrt(211);
+// echo "<br>";
+// // round off
+// // if 0.5 it makes 1 if 0.4 it makes 0
+// echo round(0.4);
+// echo "<br>";
+// echo round(0.49);
+// echo "<br>";
+// echo round(0.5);
+// // floor 
+// $a = 3.33;
+// echo floor($a);
+// // ceil
+// echo "<br>";
+// echo ceil($a);
+// // random value*************
+// echo "<br>";
+// echo rand();
+// echo "<br>";
+// // to set min and max for random
+// echo rand(20,50)
+// CONSTANT *****************************
+// no $ sign for contant variable 
+// define(name,value,case-insensitive) php does not support case-insensitive anymore.
+// Constants are global they can be accessed inside a function.
+// define("boy","Ali");
+// echo boy;
+// // const can be used to constant as well.*********
+// const value = 2000;
+// echo "<br>";
+// echo value;
+// echo "<br>";
+// $value = 3000;
+// echo value;
+// const str = "Ahmed";
+// echo str;
+// we cannot use const inside another block, function or if ****
+// function name(){
+//     // const student = "Usama";
+//     echo $student;
+// }
+// name();
+// // constant array ***********
+// echo "<br>";
+// define("laptops",["latitude 5289","hp elite-book","fujitsu note-book"]);
+// echo laptops[2],laptops[0];
+// // Array*************
+// // index_Array
+// $companies = ["Microsoft","google","Apple"];
+// print_r($companies);
+// echo "<br>";    
+// // second way 
+// $more_companies = array("Amazon","Twitter","Facebook");
+// print_r($more_companies);
+// echo "<br>";    
+// // to rewrite a value in array.
+// $companies[2] = "Facebook";
+// print_r($companies);
+// $companies[] = 30;
+// echo "<br>";    
+// print_r($companies);
+// // array merge ***********
+// $companies_together = array_merge($companies,$more_companies);
+// echo "<br>";    
+// print_r($companies_together);
+// // Associative array **************
+// $students_detail = ["name"=>"Ahmed","class"=>"9th","field"=>"Software_Eng"];
+// print_r($students_detail);
+// // Multidimentional array ***************
+// $multiArray = [
+//     ["Ali","Saqib","Faseeh",22],
+//     ["SaqibShah","Lala","Faseeh",22],
+//     ["JIbran","Saqib","Mohsin",22],
+// ];
+// print_r($multiArray);
+// // multi associative 
+// $multiAssociative = [
+//     ["name"=>"Ali","class"=>"PhpDev","age"=>21],
+//     ["name"=>"Saqib","class"=>"AndroidDev","age"=>20],
+//     ["name"=>"Faseeh","class"=>"JsDev","age"=>23],
+// ];
+// print_r($multiAssociative);
+// $developers = ["Saqib","Farhan","AhsanMughal","MohsinMughal"];
+// // for loop ************
+// for($i=0; $i<count($developers); $i++){
+//     echo $developers[$i]."<br>";
+// }
+// // foreach loop *******
+// foreach($developers as $x){
+//     echo $x."<br>";
+// }
+$products = [
+    ["name"=>"Shoe","price"=>1200],
+    ["name"=>"Shirt","price"=>2200],
+    ["name"=>"Jacket","price"=>3000]
+];
+    foreach($products as $pro){
+        echo "{$pro["name"]} - $ {$pro["price"]}<br>";
+
+    }
+
+
 ?>
