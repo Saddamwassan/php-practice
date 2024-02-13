@@ -274,11 +274,21 @@
 // foreach($developers as $x){
 //     echo $x."<br>";
 // }
-$products = [
-    ["name"=>"Shoe","price"=>1200],
-    ["name"=>"Shirt","price"=>2200],
-    ["name"=>"Jacket","price"=>3000]
-];
+// foreach loop *********
+// $places = ["karachi","hyd","islamabad","mirpurkhas"];
+// print_r($places);
+// // in for each loop main array remain same all the changes happen of items.
+// // but & makes changes to main array.
+// foreach($places as &$p){
+//     if($p == "islamabad") $p = "Quetta";
+//     echo "<br>";
+// }
+// print_r($places);
+// $products = [
+//     ["name"=>"Shoe","price"=>1200],
+//     ["name"=>"Shirt","price"=>2200],
+//     ["name"=>"Jacket","price"=>3000]
+// ];
     // foreach($products as $pro){
     //     echo "{$pro["name"]} - $ {$pro["price"]}<br>";
 
@@ -294,63 +304,64 @@ $products = [
     // echo "ali">"Ali";
     // echo "ali"=="ali";
     // echo "2"== 2;
-    $candidate = [
-        ["name"=>"ShahMehmodQureshi","votes"=>180000,],
-        ["name"=>"ImranKhan","votes"=>240000],
-        ["name"=>"NawazSharif","votes"=>50000],
-        ["name"=>"Bilawal","votes"=>70000],
-        ["name"=>"Zardar","votes"=>100000],
-        ["name"=>"shahbazSharif","votes"=>2],
-    ];
-    // function *****************
-    function election($candidates){
-        echo "{$candidates["name"]} has won {$candidates["votes"]}";
-    }
-    election(["name"=>"IK","votes"=>185000]);
-?>
- <!-- php within html ************** -->
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>php</title>
-    </head>
-    <body>
-        <h2>Html with Php</h2>
-        <ul>
-        <?php 
-        foreach($products as $product){ ?>
-        <h3><?php echo $product["name"];?></h3>
-        <p><?php echo $product["price"];?></p>
+    // 13/2/2024**************
+    // array functions 
+// array_column ****************
+// $data = [
+//             [
+//             "id"        =>  2131,
+//             "f_name"    =>  "Ali",
+//             "l-name"    =>  "Ahmed"
+//             ],
+//             [
+//                 "id"        =>  2131,
+//                 "f_name"    =>  "Saqi",
+//                 "l-name"    =>  "Ahmed"
+//             ],
+//             [
+//                 "id"        =>  2131,
+//                 "f_name"    =>  "Shahmir",
+//                 "l-name"    =>  "Ahmed"
+//             ]
 
-        <?php } ?>
-        </ul>
-        
-    </body>
-    </html>
-    <!-- conditional statement with html  -->
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <ul>
-            <?php foreach($candidate as $candi){?>
-                <?php if($candi['votes']>100000){?>
-                    <h1>Winner</h1>
-                    <li><?php echo $candi["name"];?></li>
-                    <li><?php echo $candi["votes"];?></li>
-                <?php }?>
-                <?php  if($candi['votes']<100000){?>
-                    <h1>Looser</h1>
-                    <li><?php echo $candi["name"];?></li>
-                    <li><?php echo $candi["votes"];?></li>
-                <?php }?>
-                <?php }?>
-        </ul>
-    </body>
-    </html>
+//             ];
+    
+//             $f_names = array_column($data,"f_name");
+//             print_r($f_names);
+//     //    array_combine  creates new array after combining two arrays.****
+// //    echo "<br>";
+//     $fname=array("Peter","Ben","Joe");
+// //     $age=array("35","37","43");
+// //     $c=array_combine($fname,$age);
+// //     print_r($c);
+//    echo "<br>";
+// //    add multiple items in array ********
+// array_push($fname,"Ahsan","Arsalan","Hazik");
+// print_r($fname);
+// echo "<br>";
+// // remove items from array ********
+// array_splice($fname,1,1);
+// print_r($fname);
+
+// goto label 
+echo "this is goto ";
+echo "<br>";
+echo "it skips the code and reaches targeted code";
+echo "<br>";
+goto skip;
+echo "it skips the code and reaches targeted code";
+echo "it skips the code and reaches targeted code";
+skip: 
+echo "<br>";
+echo "it skipped two lines";
+echo "<br>";
+// recursive function *******************
+function numbers($value){
+    if($value <= 10){
+        echo $value."<br>";
+        numbers($value+1);
+    }
+}
+numbers(1);
+?>
+ 
