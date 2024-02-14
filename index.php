@@ -328,6 +328,8 @@
     
 //             $f_names = array_column($data,"f_name");
 //             print_r($f_names);
+//             // third parameter id 
+//             $f_names = array_column($data,"f_name","id");
 //     //    array_combine  creates new array after combining two arrays.****
 // //    echo "<br>";
 //     $fname=array("Peter","Ben","Joe");
@@ -343,25 +345,138 @@
 // array_splice($fname,1,1);
 // print_r($fname);
 
-// goto label 
-echo "this is goto ";
+// // goto label 
+// echo "this is goto ";
+// echo "<br>";
+// echo "it skips the code and reaches targeted code";
+// echo "<br>";
+// goto skip;
+// echo "it skips the code and reaches targeted code";
+// echo "it skips the code and reaches targeted code";
+// skip: 
+// echo "<br>";
+// echo "it skipped two lines";
+// echo "<br>";
+// // recursive function *******************
+// function numbers($value){
+//     if($value <= 10){
+//         echo $value."<br>";
+//         numbers($value+1);
+//     }
+// }
+// numbers(1);
+// factorial with recursive function ***********
+// function factorial($n){
+//     if($n == 0){
+//         return 1;
+//     }else{
+//        return ($n * factorial($n-1));
+//     }
+// }
+// echo factorial(3);
+// // replace in array ************
+// $names = ["ali","Ahmed","Talha","Qasim"];
+// $newNames = ["Peter","Roman","Cena"];
+// $updatedNames = array_replace($names,$newNames);
+// // echo "<pre>";
+// // print_r($updatedNames);
+// // echo "</pre>";
+// // array shift *************
+// // it removes the first element of array 
+// array_shift($names);
+// echo "<pre>";
+// print_r($names);
+// echo "</pre>";
+// // array unshift *************
+// // it adds new element at 1st index and moves other elements forward . 
+// array_unshift($names,"saqib");
+// echo "<pre>";
+// print_r($names);
+// echo "</pre>";
+// // array merge *************
+// $mergedArray = array_merge($names,$newNames);
+// echo "<pre>";
+// print_r($mergedArray);
+// echo "</pre>";
+// // array_merge_recursive*********for multidimentional array.
+// $students = ["a" =>"ali","b"=>"Ahmed","c"=>"Talha"];
+// $classes = ["b"=>"6th","e"=>"7th","f"=>"8th"];
+// $mergedArray1 = array_merge_recursive($students,$classes);
+// echo "<pre>";
+// print_r($mergedArray1);
+// echo "</pre>";
+// // array combine *****it combines two arrays and make them keys & values
+// print_r(array_combine($students,$classes));
+// // // array keys ***********
+// $students = ["a" =>"ali","b"=>"Ahmed","c"=>"Talha"];
+// // firstkey 
+// $firstKey = array_key_first($students);
+// echo($firstKey);
+// // lastkey 
+// $lastKey = array_key_last($students);
+// echo "<br>";
+// echo($lastKey);
+// echo "<br>";
+// // array_key_exists*******
+// $keyExists = array_key_exists("d",$students);
+// if($keyExists){
+//     echo "key exists";
+// }else{
+//     echo "key does not exist";
+// }
+// // array intersect ***********
+// $students = ["a" =>"ali","b"=>"saqib","c"=>"Talha","d"=>"Hunain","e"=>"Hamza"];
+// $moreStudents = ["a" =>"ali","d"=>"saqib","c"=>"Talha"];
+// $newArray = array_intersect($students,$moreStudents);
+// echo "<br>";
+// print_r($newArray);
+// echo "<br>";
+// // array intersection key ********
+// $newArray1 = array_intersect_key($students,$moreStudents);
+// echo "<br>";
+// print_r($newArray1);
+// echo "<br>";
+// // array intersection key ********
+// $newArray2 = array_intersect_assoc($students,$moreStudents);
+// echo "<br>";
+// print_r($newArray2);
+// echo "<br>";
+// // array chunk ***********
+// $chunckArray = array_chunk($students,2);
+// echo "<pre>";
+// print_r($chunckArray);
+// echo "</pre>";
+// // array flip ***********
+// $a =["name" =>"ali","class" =>"12th","city" =>"mps"];
+// $flipArray = array_flip($a);
+// echo "<pre>";
+// print_r($flipArray);
+// echo "</pre>";
+// // array_change_key_case 
+// $b =["name" =>11,"class" =>12,"city" =>13];
+// $change = array_change_key_case($b,CASE_UPPER);
+// echo "<pre>";
+// print_r($change);
+// echo "</pre>";
+// String **************
+// adding slaches in string to secure out data 
+// these are used to send string data to server with being injected.
+// before quotes 
+$str = "Hello Its 'Saddam Hussain'.";
+echo $str;
 echo "<br>";
-echo "it skips the code and reaches targeted code";
+$slashed_str = addslashes($str);
+echo $slashed_str;
 echo "<br>";
-goto skip;
-echo "it skips the code and reaches targeted code";
-echo "it skips the code and reaches targeted code";
-skip: 
+echo stripslashes($slashed_str);
+// any where 
+$slashed_str1 = addcslashes($str,"Ia");
+$slashed_str1 = addcslashes($str,"A..Z");
+$slashed_str1 = addcslashes($str,"a..z");
 echo "<br>";
-echo "it skipped two lines";
+echo $slashed_str1;
 echo "<br>";
-// recursive function *******************
-function numbers($value){
-    if($value <= 10){
-        echo $value."<br>";
-        numbers($value+1);
-    }
-}
-numbers(1);
+echo stripcslashes($slashed_str);
+
 ?>
  
