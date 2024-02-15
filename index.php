@@ -462,21 +462,81 @@
 // adding slaches in string to secure out data 
 // these are used to send string data to server with being injected.
 // before quotes 
-$str = "Hello Its 'Saddam Hussain'.";
-echo $str;
+// $str = "Hello Its 'Saddam Hussain'.";
+// echo $str;
+// echo "<br>";
+// $slashed_str = addslashes($str);
+// echo $slashed_str;
+// echo "<br>";
+// echo stripslashes($slashed_str);
+// // any where 
+// $slashed_str1 = addcslashes($str,"Ia");
+// $slashed_str1 = addcslashes($str,"A..Z");
+// $slashed_str1 = addcslashes($str,"a..z");
+// echo "<br>";
+// echo $slashed_str1;
+// echo "<br>";
+// echo stripcslashes($slashed_str);
+// // md5 and sha for encrypting string and used for pass.********
+// // md5 always give 32 digit hexa number 
+// $password = "SaddamHussain";
+// echo $password;
+// echo "<br>";
+// echo md5($password,TRUE);
+// echo "<br>";
+// echo md5($password);
+// echo "<br>"; 
+// echo sha1($password);
+// // convert_uuencode ***********
+// $value = "Hello Bro";
+// $encode = convert_uuencode($value);
+// echo $encode;
+// echo "<br>";
+// $decode= convert_uudecode($encode);
+// echo $decode;
+// echo "<br>";
+// // bin2hex*********
+// $str = bin2hex("hi its wednesday today");
+// echo $str;
+// echo "<br>";
+// echo hex2bin($str);
+// // strip tag and wordwrap *************
+// echo "<br>";
+// $array = "This is array <h>heading</h>and <b>tag</b>.";
+// echo strip_tags($array,"<b>");
+// echo wordwrap($array,5,"<br>",true);
+// // Date*************
+// echo "day is ".date(" d");
+// echo "<br>";
+// echo "month is".date(" m");
+// echo "<br>";
+// echo "year is".date(" y");
+// echo "<br>";
+// echo "year is".date(" l");
+// echo "<br>";
+// echo "date is".date("d/m/y");
+// $names =["saqib","rizwan","saddam"];
+// foreach($names as $key => $x){
+//     if($x == "rizwan"){
+//         continue;
+//     }else{
+//         echo " ".$x;
+//     }
+// }
+// $names =[5,4,6,7,2,1];
+// sort($names);
+// echo ($names[count($names)-3]);
+// super GLOBALS in php ***********
+// GLOBALS 
+echo $_SERVER['PHP_SELF'];    
 echo "<br>";
-$slashed_str = addslashes($str);
-echo $slashed_str;
+echo $_SERVER['SERVER_ADDR'];
 echo "<br>";
-echo stripslashes($slashed_str);
-// any where 
-$slashed_str1 = addcslashes($str,"Ia");
-$slashed_str1 = addcslashes($str,"A..Z");
-$slashed_str1 = addcslashes($str,"a..z");
+echo $_SERVER['SERVER_NAME'];
 echo "<br>";
-echo $slashed_str1;
+echo $_SERVER['HTTP_HOST'];
 echo "<br>";
-echo stripcslashes($slashed_str);
+echo $_SERVER['HTTP_REFERER'];
 
 ?>
  
