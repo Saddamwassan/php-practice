@@ -537,6 +537,17 @@ echo "<br>";
 echo $_SERVER['HTTP_HOST'];
 echo "<br>";
 echo $_SERVER['HTTP_REFERER'];
+// regular expression in php *************
+// A regular expression is a sequence of characters used to form search patterns.
+// they are used for text searching or text replacement 
+// preg_match function 
+// $f_name = "Mohammad"; not working 
+// $pattern = "/hammad/i";
+// echo preg_match($pattern,$f_name);
+// preg_match_all($pattern, $str);
+// preg_replace($pattern, "W3Schools", $str);
+
+
 
 ?>
  
