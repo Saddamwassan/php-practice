@@ -7,13 +7,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $nameError = "name is required";
   }else{
     $name = test_input($_POST["name"]);
-    // if(preg_match('/a-zA-Z[]/',$name))
+    if(!preg_match('/^[a-zA-Z-]*$/',$name)){
+      $nameError = "Only letters and whitespaces are allowed.";
+    };
   }
   // email 
   if(empty($_POST["email"])){
     $emailError = "email is required";
   }else{
     $email = test_input($_POST["email"]);
+  if(filter_var($email,FILTER_VALIDATE_EMAIL)){
+    
+  }else{
+    $emailError = "invalid email address";
+  }
+  }
   }
   // gender 
   if(empty($_POST["gender"])){
@@ -33,9 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   }else{
     $comment = test_input($_POST["comment"]);
   }
-
-}
-function test_input($data) {
+function test_input($data){
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
@@ -83,6 +89,7 @@ function test_input($data) {
     echo $email."<br>";
     echo $site."<br>";
     echo $gender."<br>";
+    echo $comment;
     ?>  
 </body>
 </html>

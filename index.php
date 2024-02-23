@@ -528,25 +528,34 @@
 // echo ($names[count($names)-3]);
 // super GLOBALS in php ***********
 // GLOBALS 
-echo $_SERVER['PHP_SELF'];    
-echo "<br>";
-echo $_SERVER['SERVER_ADDR'];
-echo "<br>";
-echo $_SERVER['SERVER_NAME'];
-echo "<br>";
-echo $_SERVER['HTTP_HOST'];
-echo "<br>";
-echo $_SERVER['HTTP_REFERER'];
+// echo $_SERVER['PHP_SELF'];    
+// echo "<br>";
+// echo $_SERVER['SERVER_ADDR'];
+// echo "<br>";
+// echo $_SERVER['SERVER_NAME'];
+// echo "<br>";
+// echo $_SERVER['HTTP_HOST'];
+// echo "<br>";
+// echo $_SERVER['HTTP_REFERER'];
 // regular expression in php *************
 // A regular expression is a sequence of characters used to form search patterns.
 // they are used for text searching or text replacement 
 // preg_match function 
-// $f_name = "Mohammad"; not working 
+// $f_name = "Mohammad"; //not working 
 // $pattern = "/hammad/i";
 // echo preg_match($pattern,$f_name);
+// echo $pattern;
 // preg_match_all($pattern, $str);
 // preg_replace($pattern, "W3Schools", $str);
-
+// cookies in php ****************
+$cookie_name = "Saqib";
+$cookie_value = "He is MUGHAL";
+setcookie($cookie_name,$cookie_name,time()+(50));
+if(isset($_COOKIE[$cookie_name])){
+    echo "$cookie_name is stored.";
+}else{
+    echo " data is not stored";
+}
 
 
 ?>
