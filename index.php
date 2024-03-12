@@ -557,6 +557,26 @@ if(isset($_COOKIE[$cookie_name])){
     echo " data is not stored";
 }
 
+// rollback and commit 
+// SELECT * from users;
+// before commit all the commands are saved 
+// COMMIT; 
+// Update users set username = "ali" where id = 104;
+// ROLLBACK;
 
+// PRIMARY KEY 
+// a primary key is a field having unique values.
+// it cannot be null 
+// a table has only one primary key 
+// for predefined table 
+// ALTER TABLE users
+// ADD PRIMARY KEY (ID);
+// // foreiegn key 
+// A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+// ALTER TABLE users
+// ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+// INNER JOIN -------------
+// joining 1two tables
+// SELECT student.name,student.age ,town.town_name FROM student  INNER JOIN town  on student.town = town.town_id;
 ?>
  
