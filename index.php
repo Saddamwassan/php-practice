@@ -596,6 +596,22 @@ if(isset($_COOKIE[$cookie_name])){
 // ON t.id = stt.tech_id
 // GROUP BY(tech_id);
 // subquery it works with all the queries SELECT,INSET,UPDATE,DELETE,SELECT----------------
+// Exist and not exist 
+// SELECT name FROM student
+// WHERE courses = (SELECT course_id FROM cources WHERE course_name = "BCS");
+// union and union all ----------------------------------
+// some rules for union and union all 
+// 1.SELECT must have same number of columns.
+// 2.Columns must have same datatype.
+// 3.SELECT statement must have same order.
+// SELECT * FROM students Where age = 22
+// UNION 
+// SELECT * FROM teachers where gender = "Male"
+// union does not show duplicate data where as UnionAll does 
+// if clause -------------------
+// SELECT id,name,percentage,
+// IF(percentage>= 40,"Pass","Fail") AS Result
+// FROM students;
 
 ?>
  
