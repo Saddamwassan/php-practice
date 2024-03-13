@@ -578,5 +578,24 @@ if(isset($_COOKIE[$cookie_name])){
 // INNER JOIN -------------
 // joining 1two tables
 // SELECT student.name,student.age ,town.town_name FROM student  INNER JOIN town  on student.town = town.town_id;
+// left join 
+// SELECT student.name, student.age, town.town_name FROM student LEFT JOIN town ON student.town = town.town_id;
+// right join 
+// SELECT student.name,student.age,student.town, town.town_name FROM student RIGHT JOIN town on student.town = town.town_id;
+// cross join it brings all the data from both tables it does not need primary key and foreign key for making relation
+// SELECT * FROM student CROSS JOIN town;
+// for joining three tables 
+// SELECT  s.id,s.student_name, t.teacher_name FROM student s
+// INNER JOIN student_has_teacher on s.id = student_has_teacher.std_id
+// INNER JOIN teacher t on t.id = student_has_teacher.tech_id;
+// group by clause is used to count the number of data in a same table -----------------
+// it is used with select statement and aggregate functions
+// SELECT t.teacher_name,stt.tech_id, COUNT(stt.tech_id) as noofstudent
+// FROM teacher t 
+// INNER JOIN student_has_teacher stt 
+// ON t.id = stt.tech_id
+// GROUP BY(tech_id);
+// subquery it works with all the queries SELECT,INSET,UPDATE,DELETE,SELECT----------------
+
 ?>
  
