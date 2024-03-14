@@ -612,6 +612,18 @@ if(isset($_COOKIE[$cookie_name])){
 // SELECT id,name,percentage,
 // IF(percentage>= 40,"Pass","Fail") AS Result
 // FROM students;
+// case clause is used for multiple conditions to show result in custom column 
+// SELECT id,name,percentage,
+// CASE 
+// WHEN percentage >= 80 AND percentage <=100 THEN "1st position"
+// WHEN percentage >= 70 AND percentage <80 	THEN "2nd position"
+// WHEN percentage >= 60 AND percentage <70 	THEN "3nd position"
+// WHEN percentage >= 50 AND percentage <60 	THEN "4th position"
+// WHEN percentage >= 40 AND percentage <50 	THEN "5th position"
+// WHEN percentage <40 THEN "5th position"
+// ELSE "invalid percentage!"
+// END As grade
+// FROM student
 
 ?>
  
