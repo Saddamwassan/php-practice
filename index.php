@@ -548,14 +548,14 @@
 // preg_match_all($pattern, $str);
 // preg_replace($pattern, "W3Schools", $str);
 // cookies in php ****************
-$cookie_name = "Saqib";
-$cookie_value = "He is MUGHAL";
-setcookie($cookie_name,$cookie_name,time()+(50));
-if(isset($_COOKIE[$cookie_name])){
-    echo "$cookie_name is stored.";
-}else{
-    echo " data is not stored";
-}
+// $cookie_name = "Saqib";
+// $cookie_value = "He is MUGHAL";
+// setcookie($cookie_name,$cookie_name,time()+(50));
+// if(isset($_COOKIE[$cookie_name])){
+//     echo "$cookie_name is stored.";
+// }else{
+//     echo " data is not stored";
+// }
 
 // rollback and commit 
 // SELECT * from users;
@@ -612,7 +612,7 @@ if(isset($_COOKIE[$cookie_name])){
 // SELECT id,name,percentage,
 // IF(percentage>= 40,"Pass","Fail") AS Result
 // FROM students;
-// case clause is used for multiple conditions to show result in custom column 
+// case clause is used for multiple conditions to show result in custom column ---------------------
 // SELECT id,name,percentage,
 // CASE 
 // WHEN percentage >= 80 AND percentage <=100 THEN "1st position"
@@ -624,6 +624,47 @@ if(isset($_COOKIE[$cookie_name])){
 // ELSE "invalid percentage!"
 // END As grade
 // FROM student
+// case is also used for update -----------------
+// UPDATE student SET 
+// percentage = (CASE id 
+//               WHEN 6 THEN 50
+//               WHEN 8 THEN 100
+//              END )
+//              WHERE id IN (6,8)
+// alter command -------------------------
+// add a column to a table 
+// changing the datatype of col
+// changing col name
+// add constraints to col
+// delete col 
+// rename col 
+// rename column -------
+// ALTER TABLE student
+// RENAME bachay 
+// modify column -------
+// ALTER TABLE student
+// MODIFY Address varchar(255)
+// AFTER id;
+// changing the datatype of col------
+// ALTER TABLE student
+// MODIFY Address INT(15)
+// make a col unique ----------
+// ALTER TABLE student 
+// ADD UNIQUE (Address)
+// changing col name------------
+// / ALTER TABLE student 
+// CHANGE percentage percent INT(15)
+// delete col ------------------
+// ALTER TABLE student
+// DROP Address
+// drop and truncate 
+// truncate command only deletes data inside a table. 
+// truncate  TABLE student;
+// drop deletes the complete table 
+// DROP TABLE student;
+
+
+
 
 ?>
  
