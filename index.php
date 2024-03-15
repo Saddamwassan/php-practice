@@ -662,6 +662,30 @@
 // truncate  TABLE student;
 // drop deletes the complete table 
 // DROP TABLE student;
+// creating a view ----------------------
+// CREATE VIEW student_teacher_view
+// AS
+// SELECT s.name ,t.t_name From student s 
+// INNER JOIN student_has_teacher stt on s.id =stt.std_id
+// INNER JOIN teacher t on stt.tech_id = t.id;
+// to change view ------------------
+// ALTER VIEW student_teacher_view
+// AS
+// SELECT stt.id, s.name ,t.t_name From student s 
+// INNER JOIN student_has_teacher stt on s.id =stt.std_id
+// INNER JOIN teacher t on stt.tech_id = t.id;
+// rename view ------------------
+// RENAME TABLE student_teacher_view 
+// TO class_view
+// to delete a view----------------------
+// DROP VIEW view-name 
+// index ---------------
+// use to increase searching speed from tables 
+// CREATE INDEX first_index on student(percentage)
+// // TO show indices 
+// SHOW INDEX FROM student 
+// // delete index 
+// DROP INDEX filter_index
 
 
 
